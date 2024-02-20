@@ -54,3 +54,28 @@ end
 
 decode("h2ll4")
   
+# I prompted ChatGPT with my code to optimize it, and here's the result.
+
+def encode(string)
+    vowels_mapping = {'a' => 1, 'e' => 2, 'i' => 3, 'o' => 4, 'u' => 5}
+    
+    encoded_string = string.chars.map do |char|
+      vowels_mapping[char.downcase] || char
+    end.join
+  
+    puts encoded_string
+  end
+  
+  def decode(string)
+    vowels_mapping = {1 => 'a', 2 => 'e', 3 => 'i', 4 => 'o', 5 => 'u'}
+  
+    decoded_string = string.chars.map do |char|
+      vowels_mapping[char.to_i] || char
+    end.join
+  
+    puts decoded_string
+  end
+  
+  encode("hello")
+  decode("h2ll4")
+  
