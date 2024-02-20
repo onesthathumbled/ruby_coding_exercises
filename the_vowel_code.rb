@@ -24,7 +24,7 @@ def encode(string)
     puts new_string.join
   end
   
-  encode("hello")
+encode("hello")
   
 def decode(string)
 new_string = []
